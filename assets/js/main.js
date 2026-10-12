@@ -1,1 +1,29 @@
-(()=>{const button=document.querySelector('.menu-toggle');const nav=document.querySelector('#main-nav');if(!button||!nav)return;button.addEventListener('click',()=>{const open=nav.classList.toggle('open');button.setAttribute('aria-expanded',String(open));});document.addEventListener('click',e=>{if(!nav.contains(e.target)&&!button.contains(e.target)){nav.classList.remove('open');button.setAttribute('aria-expanded','false');}});document.addEventListener('keydown',e=>{if(e.key==='Escape'){nav.classList.remove('open');button.setAttribute('aria-expanded','false');button.focus();}});})();
+(() => {
+  const button = document.querySelector(".menu-toggle");
+  const nav = document.querySelector("#main-nav");
+
+  if (!button || !nav) return;
+
+  const closeMenu = () => {
+    nav.classList.remove("open");
+    button.setAttribute("aria-expanded", "false");
+  };
+
+  button.addEventListener("click", () => {
+    const isOpen = nav.classList.toggle("open");
+    button.setAttribute("aria-expanded", String(isOpen));
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!nav.contains(event.target) && !button.contains(event.target)) {
+      closeMenu();
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeMenu();
+      button.focus();
+    }
+  });
+})();
