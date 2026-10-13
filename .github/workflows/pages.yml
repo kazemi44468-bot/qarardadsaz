@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -29,6 +29,24 @@ jobs:
         uses: actions/configure-pages@v5
         with:
           enablement: true
+
+      - name: Download and store editorial photos
+        run: |
+          set -euo pipefail
+          mkdir -p assets/images
+          curl -fL --retry 3 --retry-all-errors 'https://images.unsplash.com/photo-1521791136064-7986c2920216?fit=crop&w=1600&q=82&fm=jpg' -o assets/images/hero-contract.jpg
+          curl -fL --retry 3 --retry-all-errors 'https://images.unsplash.com/photo-1497366754035-f200968a6e72?fit=crop&w=1600&q=82&fm=jpg' -o assets/images/modern-office.jpg
+          curl -fL --retry 3 --retry-all-errors 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?fit=crop&w=1600&q=82&fm=jpg' -o assets/images/process-review.jpg
+          curl -fL --retry 3 --retry-all-errors 'https://images.unsplash.com/photo-1556761175-b413da4baf72?fit=crop&w=1600&q=82&fm=jpg' -o assets/images/team-collaboration.jpg
+          curl -fL --retry 3 --retry-all-errors 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?fit=crop&w=1600&q=82&fm=jpg' -o assets/images/document-review.jpg
+          curl -fL --retry 3 --retry-all-errors 'https://images.unsplash.com/photo-1521737711867-e3b97375f902?fit=crop&w=1600&q=82&fm=jpg' -o assets/images/team-conversation.jpg
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/images/*.jpg
+          if ! git diff --cached --quiet; then
+            git commit -m "Add locally hosted editorial photos"
+            git push origin HEAD:main
+          fi
 
       - name: Upload website files
         uses: actions/upload-pages-artifact@v3
