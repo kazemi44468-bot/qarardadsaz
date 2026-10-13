@@ -19,9 +19,43 @@
                                           </div>
                                         </section>
 <div class="container editorial-image"><img src="../assets/images/team-conversation.jpg" alt="گفت‌وگوی تیمی و ارتباط حرفه‌ای درباره محصول" loading="lazy"><div class="editorial-caption"><span>قراردادساز</span><strong>نظم در اطلاعات؛ شفافیت در توافق</strong></div></div>
-<main class="inner-main"><div class="container content-layout"><div class="article-content"><section class="content-block"><h2>درخواست خود را مشخص کنید</h2><p>برای پیگیری درخواست، مشخص کنید به تنظیم قرارداد آنلاین، مشاوره حقوقی قرارداد یا طراحی سامانه اختصاصی برای شرکت و سازمان نیاز دارید.</p></section><section class="content-block"><h2>درخواست سازمانی</h2><p>اگر برای مجموعه خود سامانه اختصاصی می‌خواهید، انواع قراردادها، تعداد کاربران و مراحل بررسی و تأیید موردنیاز را توضیح دهید.</p></section><section class="content-block"><h2>راه‌های ارتباطی</h2><p>اطلاعات تماس رسمی پس از نهایی‌شدن در این بخش درج خواهد شد.</p><div class="page-end"><a href="services.html">مشاهده خدمات ←</a><a href="../index.html">بازگشت به صفحه نخست ←</a></div></section></div><aside class="side-card"><h3>خدمات</h3><nav class="side-nav"><a href="process.html">تنظیم قرارداد آنلاین</a><a href="about.html">مشاوره حقوقی قرارداد</a><a href="capabilities.html">سامانه اختصاصی</a></nav></aside></div></main>
+<main class="inner-main"><div class="container content-layout"><div class="article-content">
+<section class="content-block"><h2>شرح درخواست</h2><p>نوع خدمت و موضوع موردنظر را مشخص کنید تا شرح درخواست شما منظم و آماده کپی‌کردن باشد. این فرم در حال حاضر اطلاعات را فقط در همین صفحه آماده می‌کند و آن را به سرور ارسال نمی‌کند.</p>
+<form class="request-form" id="request-form">
+<div class="contact-panel">
+<label class="contact-item"><strong>نوع درخواست</strong><select name="requestType" required><option value="">انتخاب کنید</option><option>تنظیم قرارداد آنلاین</option><option>مشاوره حقوقی قرارداد</option><option>سامانه قراردادساز اختصاصی</option><option>سایر درخواست‌ها</option></select></label>
+<label class="contact-item"><strong>نام یا عنوان مجموعه (اختیاری)</strong><input name="requester" type="text" maxlength="120" placeholder="نام شما یا نام مجموعه"></label>
+<label class="contact-item"><strong>موضوع قرارداد یا درخواست</strong><input name="subject" type="text" maxlength="180" required placeholder="برای مثال: قرارداد خدمات یا همکاری"></label>
+<label class="contact-item"><strong>میزان فوریت</strong><select name="urgency"><option>عادی</option><option>زمان‌بندی مشخص دارم</option><option>نیازمند بررسی فوری</option></select></label>
+</div>
+<label class="contact-item request-message"><strong>شرح نیاز و شرایط مهم</strong><textarea name="details" rows="6" maxlength="5000" required placeholder="موضوع توافق، طرفین، تعهدات اصلی، زمان‌بندی و پرسش‌های موردنظر را شرح دهید."></textarea><span class="field-hint">تا ۵۰۰۰ نویسه. اطلاعات محرمانه یا شناسه‌های حساس را وارد نکنید.</span></label>
+<label class="contact-item request-message"><strong>اطلاعات تکمیلی (اختیاری)</strong><textarea name="notes" rows="3" maxlength="2000" placeholder="شرط ویژه یا توضیح تکمیلی"></textarea></label>
+<div class="form-actions"><button class="button button-gold" type="submit">آماده‌سازی متن درخواست ←</button><button class="button button-outline" type="reset">پاک‌کردن فرم</button></div>
+</form>
+<div class="request-result" id="request-result" hidden aria-live="polite"><h3>متن درخواست آماده است</h3><p>متن زیر را مرور و کپی کنید. این مرحله به معنی ثبت یا ارسال درخواست نیست.</p><textarea id="request-output" rows="12" readonly aria-label="متن آماده درخواست"></textarea><div class="form-actions"><button class="button button-gold" type="button" id="copy-request">کپی متن درخواست</button><span class="copy-status" id="copy-status" role="status"></span></div></div>
+</section>
+<section class="content-block"><h2>اگر درخواست شما سازمانی است</h2><p>برای بررسی سامانه قراردادساز اختصاصی، نوع قراردادها، تعداد و نقش کاربران، مراحل تهیه و تأیید سند، نیازهای گزارش‌گیری و سامانه‌های فعلی مجموعه را شرح دهید.</p><div class="mini-grid"><div class="mini-card"><strong>نوع قراردادها</strong><p>چه قراردادهایی پرتکرارند و چه تفاوت‌هایی دارند؟</p></div><div class="mini-card"><strong>گردش کار</strong><p>چه کسانی تنظیم، بررسی و تأیید می‌کنند؟</p></div><div class="mini-card"><strong>خروجی مورد انتظار</strong><p>تهیه سند، مدیریت نسخه‌ها یا گزارش‌گیری؟</p></div><div class="mini-card"><strong>محدودیت‌ها</strong><p>چه الزامات امنیتی یا یکپارچگی وجود دارد؟</p></div></div></section>
+<section class="content-block"><h2>راه ارتباطی و وضعیت درخواست</h2><p>اطلاعات تماس رسمی و درگاه ثبت درخواست آنلاین هنوز در این صفحه تعریف نشده‌اند. برای جلوگیری از ارائه اطلاعات نادرست، شماره یا نشانی ساختگی درج نشده است.</p><div class="notice">این صفحه امکان آماده‌سازی متن درخواست را فراهم می‌کند؛ فرم به‌تنهایی درخواست را برای شخص یا مجموعه‌ای ارسال نمی‌کند.</div><div class="page-end"><a href="services.html">مشاهده خدمات ←</a><a href="../index.html">بازگشت به صفحه نخست ←</a></div></section>
+</div><aside class="side-card"><h3>مسیرهای خدمات</h3><nav class="side-nav"><a href="process.html">تنظیم قرارداد آنلاین</a><a href="about.html">مشاوره حقوقی قرارداد</a><a href="capabilities.html">سامانه اختصاصی</a><a href="services.html">نمای کلی خدمات</a></nav><div class="side-note">موضوع توافق و نتیجه موردانتظار را روشن بنویسید و از واردکردن اطلاعات محرمانه غیرضروری خودداری کنید.</div></aside></div></main>
+
                                                                                   <footer class="site-footer"><div class="container footer-grid"><div class="footer-about"><a class="brand" href="../index.html" aria-label="صفحه نخست قراردادساز"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><path d="M13 5h16l8 8v29H13zM29 5v9h8M19 22h12M19 28h12M19 34h7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>قراردادساز</strong><small>پلتفرم هوشمند قرارداد</small></span></a><p>مسیر ساختاریافته برای تهیه پیش‌نویس قرارداد؛ با تأکید بر نظم اطلاعات، شفافیت بندها و بازبینی انسانی.</p></div><div class="footer-links"><strong>خدمات</strong><a href="../pages/process.html">تنظیم قرارداد آنلاین</a><a href="../pages/about.html">مشاوره حقوقی قرارداد</a><a href="../pages/capabilities.html">سامانه اختصاصی</a></div><div class="footer-links"><strong>دسترسی</strong><a href="../pages/services.html">همه خدمات</a><a href="../pages/contact.html">ارتباط با ما</a></div></div><div class="container footer-bottom"><span>پلتفرم هوشمند قراردادساز</span><span>پیش‌نویس جایگزین بررسی تخصصی یا تشریفات قانونی لازم نیست.</span><a href="#top">بازگشت به بالا ↑</a></div></footer>
                                                                                                                       <script src="../assets/js/main.js">
                                                                                                                       </script>
-                                                                                                                  </body>
+                                                                                                                  <script>
+document.addEventListener("DOMContentLoaded",function(){
+ const form=document.querySelector("#request-form");if(!form)return;
+ const result=document.querySelector("#request-result"),output=document.querySelector("#request-output"),status=document.querySelector("#copy-status");
+ form.addEventListener("submit",function(e){
+  e.preventDefault();const d=new FormData(form);
+  const fields=[["نوع درخواست","requestType"],["نام یا عنوان مجموعه","requester"],["موضوع","subject"],["میزان فوریت","urgency"],["شرح نیاز","details"],["اطلاعات تکمیلی","notes"]];
+  output.value=["درخواست خدمات قراردادساز","========================",...fields.map(function(x){return x[0]+"： "+(String(d.get(x[1])||"").trim()||"ذکر نشده");})].join("\\n");
+  result.hidden=false;status.textContent="";result.scrollIntoView({behavior:"smooth",block:"nearest"});
+ });
+ form.addEventListener("reset",function(){result.hidden=true;output.value="";status.textContent="";});
+ document.querySelector("#copy-request").addEventListener("click",async function(){
+  try{if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(output.value);}else{output.focus();output.select();if(!document.execCommand("copy"))throw new Error("copy failed");}status.textContent="متن درخواست کپی شد.";}
+  catch(e){output.focus();output.select();status.textContent="متن انتخاب شد؛ آن را دستی کپی کنید.";}
+ });
+});
+</script></body>
                                                                                                                 </html>
