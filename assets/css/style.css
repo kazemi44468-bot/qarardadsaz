@@ -62,32 +62,32 @@ button {
   border-bottom:1px solid #e4eae5
 }
 .header-inner {
-  min-height:82px;
+  min-height:66px;
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:25px
+  gap:14px
 }
 .brand {
   display:flex;
   align-items:center;
-  gap:11px;
+  gap:8px;
   flex-shrink:0;
   color:var(--deep)
 }
 .brand-mark {
-  width:43px;
-  height:43px;
+  width:35px;
+  height:35px;
   border:1px solid #d5e1d8;
   background:linear-gradient(145deg,#f7faf6,#e6f0e8);
   color:var(--green);
-  border-radius:13px;
+  border-radius:10px;
   display:grid;
   place-items:center
 }
 .brand-mark svg {
-  width:29px;
-  height:29px
+  width:23px;
+  height:23px
 }
 .brand strong,.brand small {
   display:block
@@ -104,28 +104,32 @@ button {
 .main-nav {
   display:flex;
   align-items:center;
-  gap:4px
+  gap:2px
 }
 .main-nav>a {
-  padding:8px 11px;
-  border-radius:9px;
-  font-size:12px;
+  padding:5px 8px;
+  border:1px solid transparent;
+  border-radius:6px;
+  font-size:11px;
+  line-height:1.5;
   color:#4e625b;
   white-space:nowrap;
-  transition:.2s
+  transition:background .18s ease,color .18s ease,border-color .18s ease
 }
 .main-nav>a:hover,.main-nav>a.active {
-  background:#edf4ef;
+  background:#f1f5f1;
+  border-color:#e3ebe4;
   color:var(--deep)
 }
 .main-nav>a.nav-cta {
-  background:var(--deep);
-  color:#fff;
-  padding-inline:16px;
-  margin-right:5px
+  background:transparent;
+  color:#4e625b;
+  padding:5px 8px;
+  margin-right:0
 }
 .main-nav>a.nav-cta:hover {
-  background:var(--green)
+  background:#f1f5f1;
+  color:var(--deep)
 }
 .menu-toggle {
   display:none;
