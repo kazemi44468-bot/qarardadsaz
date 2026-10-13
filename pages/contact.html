@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded",function(){
  form.addEventListener("submit",function(e){
   e.preventDefault();const d=new FormData(form);
   const fields=[["نوع درخواست","requestType"],["نام یا عنوان مجموعه","requester"],["موضوع","subject"],["میزان فوریت","urgency"],["شرح نیاز","details"],["اطلاعات تکمیلی","notes"]];
-  output.value=["درخواست خدمات قراردادساز","========================",...fields.map(function(x){return x[0]+"： "+(String(d.get(x[1])||"").trim()||"ذکر نشده");})].join("\\n");
+  output.value=["درخواست خدمات قراردادساز","========================",...fields.map(function(x){return x[0]+"： "+(String(d.get(x[1])||"").trim()||"ذکر نشده");})].join("\n");
   result.hidden=false;status.textContent="";result.scrollIntoView({behavior:"smooth",block:"nearest"});
  });
  form.addEventListener("reset",function(){result.hidden=true;output.value="";status.textContent="";});
