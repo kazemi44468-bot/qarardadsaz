@@ -1,29 +1,6 @@
 (() => {
-  const button = document.querySelector(".menu-toggle");
-  const nav = document.querySelector("#main-nav");
-
-  if (!button || !nav) return;
-
-  const closeMenu = () => {
-    nav.classList.remove("open");
-    button.setAttribute("aria-expanded", "false");
-  };
-
-  button.addEventListener("click", () => {
-    const isOpen = nav.classList.toggle("open");
-    button.setAttribute("aria-expanded", String(isOpen));
-  });
-
-  document.addEventListener("click", (event) => {
-    if (!nav.contains(event.target) && !button.contains(event.target)) {
-      closeMenu();
-    }
-  });
-
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") {
-      closeMenu();
-      button.focus();
-    }
-  });
+ const button=document.querySelector(".menu-toggle"),nav=document.querySelector("#main-nav");
+ if(button&&nav){const close=()=>{nav.classList.remove("open");button.setAttribute("aria-expanded","false")};button.addEventListener("click",()=>{const open=nav.classList.toggle("open");button.setAttribute("aria-expanded",String(open))});document.addEventListener("click",e=>{if(!nav.contains(e.target)&&!button.contains(e.target))close()});nav.querySelectorAll("a").forEach(a=>a.addEventListener("click",close));window.addEventListener("resize",()=>{if(innerWidth>860)close()})}
+ if(!document.querySelector(".back-to-top")){const a=document.createElement("a");a.className="back-to-top";a.href="#top";a.setAttribute("aria-label","بازگشت به بالای صفحه");a.title="بازگشت به بالا";a.textContent="↑";document.body.appendChild(a);const update=()=>a.classList.toggle("visible",scrollY>280);addEventListener("scroll",update,{passive:true});update()}
+ if(!document.querySelector(".mobile-bottom-nav")){const path=location.pathname,home=path.endsWith("/qarardadsaz/")||path.endsWith("/index.html"),p=path.includes("/pages/")?"../":"";const links=[["index.html","نخست","⌂",home],["pages/about.html","معرفی","▤",path.endsWith("about.html")],["pages/process.html","فرایند","⇢",path.endsWith("process.html")],["pages/capabilities.html","قابلیت‌ها","◇",path.endsWith("capabilities.html")],["pages/contact.html","ارتباط","✉",path.endsWith("contact.html")]];const bar=document.createElement("nav");bar.className="mobile-bottom-nav";bar.setAttribute("aria-label","دسترسی سریع موبایل");bar.innerHTML=links.map(x=>'<a href="'+p+x[0]+'"'+(x[3]?' class="active" aria-current="page"':'')+'><span aria-hidden="true">'+x[2]+'</span>'+x[1]+'</a>').join("");document.body.appendChild(bar)}
 })();
