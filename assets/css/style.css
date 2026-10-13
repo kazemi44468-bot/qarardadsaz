@@ -1503,7 +1503,7 @@ p{ text-wrap:pretty }
 }
 
 @font-face{font-family:Vazirmatn;src:url("../fonts/Vazirmatn[wght].woff2") format("woff2");font-style:normal;font-weight:100 900;font-display:swap}
-body{font-family:Vazirmatn,Tahoma,sans-serif}
+body{font-family:"Vazirmatn"}
 .site-header{border-bottom:1px solid #dfe8df;box-shadow:0 7px 24px rgba(20,60,48,.055)}.header-inner{gap:18px;min-height:88px}
 .main-nav{display:flex;align-items:center;gap:5px;padding:7px;border:1px solid #e3e9df;border-radius:16px;background:linear-gradient(135deg,#fbfcf8,#f1f6f0);box-shadow:inset 0 1px 0 #fff,0 4px 12px rgba(25,70,54,.04)}
 .main-nav>a{position:relative;padding:9px 12px;border:1px solid transparent;border-radius:10px;font-size:12px;white-space:nowrap;transition:background .2s,border-color .2s,transform .2s}.main-nav>a:hover{background:#fff;border-color:#d9e4d8;transform:translateY(-1px)}.main-nav>a.active{background:#fff;border-color:#d7e2d5;box-shadow:0 3px 9px rgba(16,60,56,.07);font-weight:700}.main-nav>a.nav-cta{border:1px solid #c7ad78;background:linear-gradient(135deg,#174c43,#103c38);box-shadow:0 5px 12px rgba(16,60,56,.15);margin-right:3px;color:#fff}.main-nav>a.nav-cta:hover,.main-nav>a.nav-cta.active{background:#205c50;border-color:#d5bd8d;color:#fff}
